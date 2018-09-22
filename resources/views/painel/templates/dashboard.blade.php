@@ -32,7 +32,12 @@
 					Usuários
 				</a>
 			</li>
-
+			<li>
+				<a href="{{url('/painel/categorias')}}">
+			<i class="fa fa-list" aria-hidden="true"></i>
+			Categorias
+				</a>
+			</li>
 			<li>
             <a href="{{url('/painel/home')}}">
 					<i class="fa fa-home" aria-hidden="true"></i>
@@ -64,12 +69,12 @@
 		<div class="dropdown user-dash">
 		  <div class="dropdown-toggle" id="dropDownCuston" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 			<img src="{{url('imgs/no-image.png')}}" alt="Jaime Vendrame" class="user-dashboard img-circle">
-		    <p class="user-name">Nome User</p>
+			<p class="user-name">{{Auth::User()->name}}</p>
 		    <span class="caret"></span>
 		  </div>
 		  <ul class="dropdown-menu dp-menu" aria-labelledby="dropDownCuston">
 		    <li><a href="#">Perfil</a></li>
-		    <li><a href="#">Logout</a></li>
+			<li><a href="{{route('logout')}}">Logout</a></li>
 		  </ul>
 		</div>
 	</div><!--Top Dashboard-->
