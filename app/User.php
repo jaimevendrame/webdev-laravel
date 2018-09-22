@@ -14,6 +14,8 @@ class User extends Authenticatable
      *
      * @var array
      */
+
+     /** OS ATRIBUTOS QUE FORMULÁRIO TEM PERMISSÃO DE PERSISTIR NO BANCO. */
     protected $fillable = [
         'name', 'email', 'password','facebook', 'twitter', 'github','site','biography', 'image'
     ];
@@ -27,6 +29,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    /** REGRAS DE VÁLIDAÇÃO */
     public function rules($id = '')
     {
         return [
