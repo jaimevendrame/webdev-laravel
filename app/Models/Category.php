@@ -19,4 +19,12 @@ class Category extends Model
             'description' => 'required|min:3|max:1000',
         ];
     }
+    
+     /**
+     * Retornar todos os posts do usuário./
+     */
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 }

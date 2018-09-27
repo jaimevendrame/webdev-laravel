@@ -7,11 +7,11 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 		<!--Fonts-->
-    <link rel="stylesheet" href="{{url('painel/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{url('admin/css/font-awesome.min.css')}}">
 
 		<!--CSS Person-->
-    <link rel="stylesheet" href="{{url('painel/css/webdevalfa.css')}}">
-    <link rel="stylesheet" href="{{url('painel/css/webdevalfa-reset.css')}}">
+    <link rel="stylesheet" href="{{url('admin/css/webdevalfa.css')}}">
+    <link rel="stylesheet" href="{{url('admin/css/webdevalfa-reset.css')}}">
 
 		<!--Favicon-->
     <link rel="icon" type="image/png" href="{{url('imgs/favicon.png')}}">
@@ -21,7 +21,7 @@
 <section class="menu">
 	
 	<div class="logo">
-    <img src="{{url('painel/imgs/icone-alfa.png')}}" alt="webdevalfa" class="logo-painel">
+    <img src="{{url('admin/imgs/icone-alfa.png')}}" alt="webdevalfa" class="logo-painel">
 	</div>
 
 	<div class="list-menu">
@@ -82,7 +82,7 @@
 	<div class="content-ds">
 		
 		<div class="bred">
-			<a href="" class="bred">Home  ></a> <a href="" class="bred">Dashboard</a>
+		<a href="{{route('home')}}" class="bred">Home  ></a> <a href="" class="bred">Dashboard</a>
 		</div>
 
 		
@@ -96,7 +96,7 @@
 	
 
 	<!--jQuery-->
-<script src="{{url('painel/js/jquery-3.1.1.min.js')}}"></script>
+<script src="{{url('admin/js/jquery-3.1.1.min.js')}}"></script>
 
 	<!-- jS Bootstrap -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

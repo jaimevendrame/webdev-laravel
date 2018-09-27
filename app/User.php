@@ -44,4 +44,12 @@ class User extends Authenticatable
             'image'     => 'image',
         ];
     }
+
+    /**
+     * Retornar todos os posts do usuário./
+     */
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 }

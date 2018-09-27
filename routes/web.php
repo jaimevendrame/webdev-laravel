@@ -15,7 +15,8 @@ $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
 $this->post('login', 'Auth\LoginController@login');
 $this->get('logout', 'Auth\LoginController@logout')->name('logout');
 
-// Registration Routes...
+// Registration Routes... Estas rotas podem ser excluidas, caso em sua regra de negocio
+// não exista o auto cadastro do usuário.
 $this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 $this->post('register', 'Auth\RegisterController@register');
 
@@ -40,6 +41,7 @@ Route::get('/', 'Site\SiteController@index');
  * Rotas do Painel
 ****************************************************************************************/
 Route::group(['prefix' => 'painel', 'middleware' => 'auth'], function (){
+    
     //Usuários
     Route::any('/usuarios/pesquisar', 'Painel\UserController@search')->name('usuarios.search');
     Route::resource('/usuarios', 'Painel\UserController');
@@ -49,38 +51,10 @@ Route::group(['prefix' => 'painel', 'middleware' => 'auth'], function (){
    Route::resource('/categorias', 'Painel\CategoriaController');
 
    //Raiz painel
-
+   Route::get('/', 'HomeController@index')->name('home');
 });
 
 
 
-/**
- * Routes Painel
- */
-
-//  Route::get('/painel/home', function (){
-
-//      return view ('painel.index');
-//  });
-
-//  Route::get('/painel/list', function (){
-
-//     return view ('painel.modulos.list');
-// });
-
-
-// Route::get('/painel', function (){
-
-//     return view ('painel.modulos.home');
-// });
-
-
-// // /**
-// //  * Routes Painel
-// //  */
-
-// Route::get('/painel/home', 'Painel\PainelController@home');
-// Route::get('/painel/list', 'Painel\PainelController@list');
-// Route::get('/painel/forms', 'Painel\PainelController@forms');
 
 
